@@ -6,7 +6,7 @@ Projeto construido juntamente com o video/curso da B7Wwb. Todos os creditos ao B
 Screenshots:
 
 ➜ A aplicação em sua fase final, buscando todas as informações sobre o filme/seriado em destaque pela API.
-[FeaturedMovie](https://user-images.githubusercontent.com/36114140/156033348-96e14360-7a6e-47fe-8b8a-e735851f1c20.png)
+![FeaturedMovie](https://user-images.githubusercontent.com/36114140/156033348-96e14360-7a6e-47fe-8b8a-e735851f1c20.png)
 
 ➜ As listas de filmes criadas de forma horizontal buscando os titulos na API, e com controles de rolagem das listas aparecendo somente ao passar o mouse sobre eles. 
 ![Lists](https://user-images.githubusercontent.com/36114140/156033392-8b0945a1-7c69-4abc-b93d-94cb3b1ff0bb.png)
