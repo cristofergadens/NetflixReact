@@ -1,7 +1,7 @@
 # Projeto Netflix. 
 Esse projeto buscou fazer um clone do aplicativo de streaming mundialmente conhecido Netflix. Usando React e consultando a API do TheMovieDatabase a aplicação é fiel aos detalhes como animações e responsividade. 
 
-Projeto construido juntamente com o video/curso da B7Wwb. Todos os creditos ao Bonieky. https://youtu.be/tBweoUiMsDg
+Projeto construido juntamente com o video/curso da B7Web. Todos os creditos ao Bonieky. https://youtu.be/tBweoUiMsDg
 
 Screenshots:
 
