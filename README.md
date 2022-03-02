@@ -15,12 +15,9 @@ Screenshots:
 ![mobile](https://user-images.githubusercontent.com/36114140/156033402-95195b45-8f5e-40f3-9eff-7a34b9a57618.png)
 
 
-# Passo a passo para iniciar o projeto React. Getting Started with Create React App
+# Passo a passo para iniciar o projeto React.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts!
-
 
 No diretório do projeto, abra um terminal e rode o seguinte comando:
 
