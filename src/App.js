@@ -4,6 +4,7 @@ import Tmdb from './Tmdb';
 import MovieRow from './components/MovieRow';
 import FeaturedMovie from './components/FeaturedMovie';
 import Header from './components/Header';
+import FooterLogo from './img/footer-logo.png';
 
 export default () => {
 
@@ -13,15 +14,23 @@ export default () => {
 
   useEffect(() => {
     const loadAll = async () => {
-      let list = await Tmdb.getHomeList();
-      setMovieList(list);
+      try {
+        let list = await Tmdb.getHomeList();
+        setMovieList(list);
 
-      let originals = list.filter(i => i.slug === 'originals');
-      let randomChosen = Math.floor(Math.random() * (originals[0].items.results.length - 1));
-      let chosen = originals[0].items.results[randomChosen]
-      let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
-      setFeaturedData(chosenInfo);
+        let originals = list.find(item => item.slug === 'trending');
+        let originalsFiltered = originals.items.results.filter(item => item.media_type === "tv");
+
+        let randomChosen = Math.floor(Math.random() * originalsFiltered.length);
+        let chosen = originalsFiltered[randomChosen];
+
+        let chosenInfo = await Tmdb.getMovieInfo(chosen.id, 'tv');
+        setFeaturedData(chosenInfo);
+      } catch (error) {
+        console.error('Error loading data:', error);
+      }
     }
+
 
     loadAll();
   }, []);
@@ -53,15 +62,17 @@ export default () => {
       <section className="lists">
         {movieList.map((item, key) => (
           <MovieRow key={key} title={item.title} items={item.items}
-          if></MovieRow>
-          ))
+            if></MovieRow>
+        ))
         }
       </section>
       <footer>
-        Projeto feito em React. Inspirado no curso da B7Web.<br />
         Todos os dados foram extraídos da <a href='https://tmdb.org' className='api--button'>API Tmdb.</a><br />
         Todos os direitos de imagem reservados a Netflix. <br /><br />
-        <span className='name'>Cristofer Gadens</span>
+        <div className="footer-info">
+          <p>powered by</p>
+          <img src={FooterLogo} alt="Logo" className='footer-logo' />
+        </div>
       </footer>
 
       {movieList.length <= 0 &&

@@ -19,6 +19,14 @@ footer{
   font-weight: bold;
   padding: 50px
 }
+
+footer .footer-info {
+  color: rgb(93, 119, 118);
+}
+footer .footer-logo {
+  width: 100px;
+  height: auto;
+}
 .api--button{
   text-decoration: none;
   color: #999;

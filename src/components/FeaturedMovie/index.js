@@ -3,7 +3,6 @@ import './style.css';
 
 export default ({ item }) => {
 
-    console.log(item);
     let firstDate = new Date(item.first_air_date);
     let genres = [];
     for (let i in item.genres){
